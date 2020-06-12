@@ -1,0 +1,55 @@
+{
+  "name": "xzspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-async-to-generator": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/register": "^7.10.1",
+    "@types/webpack-env": "^1.15.2",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "http": "0.0.1-security",
+    "koa": "^2.12.0",
+    "koa-router": "^9.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "start": "node --harmony server/index.js",
+    "c": "webpack-dev-server --config ./webpack.config.dev.js",
+    "s": "webpack-dev-server --config ./webpack.config.ssr.js",
+    "pro": "webpack-dev-server --config ./webpack.config.pro.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaterHong/xzspace.git"
+  },
+  "keywords": [
+    "react",
+    "koa"
+  ],
+  "host": "106.52.51.48",
+  "author": "waterhong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaterHong/xzspace/issues"
+  },
+  "homepage": "https://github.com/WaterHong/xzspace#readme"
+}
