@@ -13,6 +13,10 @@ module.exports = {
         path: path.resolve(process.cwd(), "./dist/")
     },
 
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
+    },
+
     devtool: 'inline-source-map',
     
     optimization: {

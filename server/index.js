@@ -3,5 +3,8 @@ require('@babel/register')({
       '@babel/preset-react',
       '@babel/preset-env'
   ],
+  plugins: [
+    ["@babel/transform-runtime"]
+  ]
 });
 require('./app.js');

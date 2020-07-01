@@ -10,13 +10,20 @@
     "@babel/preset-react": "^7.10.1",
     "@babel/register": "^7.10.1",
     "@types/webpack-env": "^1.15.2",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+    "fs": "0.0.1-security",
     "html-webpack-plugin": "^4.3.0",
     "http": "0.0.1-security",
     "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.0.1",
+    "koa2-cors": "^2.0.6",
     "mini-css-extract-plugin": "^0.9.0",
+    "mongoose": "^5.9.20",
+    "net": "^1.0.2",
+    "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -27,13 +34,14 @@
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.10.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "start": "node --harmony server/index.js",
+    "start": "nodemon server/index.js",
     "c": "webpack-dev-server --config ./webpack.config.dev.js",
-    "s": "webpack-dev-server --config ./webpack.config.ssr.js",
+    "s": "concurrently \"cross-env NODE_ENV=development midway-bin dev --ts\" \"cross-env NODE_ENV=development webpack --watch --config ./webpack.config.ssr.js\"",
     "pro": "webpack-dev-server --config ./webpack.config.pro.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
